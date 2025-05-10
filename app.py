@@ -1,4 +1,11 @@
 import streamlit as st
+import langchain
+import os
+
+# 💡 LangChainのバージョンを表示（ここで確認！）
+st.write("LangChain version:", langchain.__version__)
+
+# タイトル
 st.title("Hello Streamlit!")
 import streamlit as st
 
