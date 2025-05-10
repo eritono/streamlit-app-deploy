@@ -1,6 +1,14 @@
 import streamlit as st
-import langchain
+import subprocess
+import sys
 import os
+from langchain.chat_models import ChatOpenAI
+from langchain.schema import SystemMessage, HumanMessage
+import langchain
+
+# 📦 pip freeze の結果を表示（デバッグ用）
+st.write("現在のインストール済みパッケージ一覧（pip freeze）")
+st.code(subprocess.check_output([sys.executable, "-m", "pip", "freeze"]).decode("utf-8"))
 
 # 💡 LangChainのバージョンを表示（ここで確認！）
 st.write("LangChain version:", langchain.__version__)
